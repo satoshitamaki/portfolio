@@ -15,3 +15,76 @@ body	{
 	display: block;
 	clear: both
 }
+
+/* header */
+.header__inner {
+  width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* logo */
+.header-logo {
+  padding: 40px 0;
+}
+.header-logo__title {
+  font-size: 3.6rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+}
+
+/* global-nav */
+.global-nav__list {
+  display: flex;
+  justify-content: space-between;
+}
+.global-nav__item {
+  position: relative;
+  flex: 1;
+  background-color: #ffffff;
+}
+.global-nav__item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: calc(100% / 2 - 8px);
+  right: 0;
+  height: 16px;
+  width: 1px;
+  background-color: #000000;
+}
+.global-nav__item > a {
+  display: inline-block;
+  position: relative;
+  padding: 5px 0;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-transform: capitalize;
+  letter-spacing: 1.2px;
+}
+.global-nav__item > a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 98%;
+  background-color: #000000;
+
+  transform: scaleX(0);
+  transform-origin: right center;
+  transition: transform 300ms;
+}
+.global-nav__item > a:hover::before {
+  transform: scaleX(1);
+  transform-origin: left center;
+}
+.global-nav__item--current > a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #000000;
+}
