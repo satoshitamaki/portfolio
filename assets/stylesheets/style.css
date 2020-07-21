@@ -18,7 +18,7 @@ body	{
 
 /* container */
 .container {
-  width: 1000px;
+  width: 800px;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -112,21 +112,17 @@ body	{
   letter-spacing: 1.2px;
   text-transform: capitalize;
 }
-/* .section__title::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 1px;
-  width: 100%;
-  background-color: #000000;
-} */
+.section__body {
+  width: 800px;
+  margin: 0 auto;
+  padding: 60px 0 0;
+}
 
 /* profile */
 .profile__inner {
   width: 800px;
   margin: 0 auto;
-  padding: 50px 0;
+  padding: 60px 0 0;
   display: flex;
   justify-content: space-between;
 }
@@ -163,4 +159,79 @@ body	{
 }
 .profile__text > span {
   font-weight: bold;
+}
+
+/* skills */
+.skill__list {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.skill__item {
+  cursor: pointer;
+  color: #acb6bc;
+}
+.skill__item:hover {
+  color: #4c6ef5;
+  transition: .3s;
+}
+.skill__item--current {
+  color: #4c6ef5;
+}
+.skill__text {
+  line-height: 1.6;
+  display: none;
+  font-size: 1.6rem;
+}
+.skill__text--current {
+  display: block;
+}
+
+/* works */
+.work {
+  display: flex;
+}
+.work__head {
+  width: 50%;
+  margin-right: 20px;
+}
+.work__body {
+  width: 50%;
+}
+.work__image {
+  width: 100%;
+}
+.work__title {
+  margin-bottom: 10px;
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+.work__direction {
+  line-height: 1.6;
+  font-size: 1.6rem;
+}
+
+/* contact */
+.contact__body {
+  display: flex;
+  justify-content: center;
+}
+.contact__btn {
+  padding: 20px 40px;
+  font-size: 2.4rem;
+  letter-spacing: 1.4px;
+  font-weight: bold;
+  border: 1px solid #000000;
+}
+
+/* footer */
+.footer {
+  padding: 10px 0;
+}
+.footer__inner {
+  display: flex;
+  justify-content: center;
+}
+.copyright {
+  font-size: 1.6rem;
 }
