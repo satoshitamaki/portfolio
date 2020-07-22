@@ -18,4 +18,23 @@ $(function() {
 
   });
 
+  // scroll
+  $('a[href^="#"]').on("click", function(){
+
+    // スクロールスピード
+    var speed = 400;
+
+    // hrefの値
+    var href = $(this).attr("href");
+
+    // 位置を取得
+    var location = $(href).offset().top;
+
+    // スクロールする
+    $('body,html').animate({scrollTop:location}, {duration: speed, easing: 'swing'});
+
+    return false;
+
+  });
+
 });
