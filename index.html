@@ -14,18 +14,20 @@
 
 <body>
 	<header class="header">
-		<div class="header__inner">
-			<div class="header-logo">
-				<h1 class="header-logo__title">tamaki satoshi</h1>
+		<div class="container">
+			<div class="header__inner">
+				<div class="header-logo">
+					<h1 class="header-logo__title">tamaki satoshi</h1>
+				</div>
+				<nav class="global-nav">
+					<ul class="global-nav__list">
+						<li class="global-nav__item global-nav__item--current"><a href="#profile">profile</a></li>
+						<li class="global-nav__item"><a href="#skills">skills</a></li>
+						<li class="global-nav__item"><a href="#works">works</a></li>
+						<li class="global-nav__item"><a href="#contact">contact</a></li>
+					</ul>
+				</nav>	
 			</div>
-			<nav class="global-nav">
-				<ul class="global-nav__list">
-					<li class="global-nav__item global-nav__item--current"><a href="#profile">profile</a></li>
-					<li class="global-nav__item"><a href="#skills">skills</a></li>
-					<li class="global-nav__item"><a href="#works">works</a></li>
-					<li class="global-nav__item"><a href="#contact">contact</a></li>
-				</ul>
-			</nav>
 		</div>
 	</header>
 	<main class="main">
@@ -34,25 +36,31 @@
 				<div class="section__head">
 					<h2 class="section__title">profile</h2>
 				</div>
-				<div class="profile">
-					<div class="profile__inner">
-						<div class="profile__head">
-							<div class="profile-slider" id="profile-slider">
-								<div class="profile-slider__wrap">
-									<img src="assets/images/noimage.jpg" alt="俺">
-									<img src="assets/images/noimage.jpg" alt="ラーメン">
-									<img src="assets/images/noimage.jpg" alt="囲碁">
-									<img src="assets/images/noimage.jpg" alt="読書">
+				<div class="section__body">
+					<div class="profile">
+						<div class="profile__inner">
+							<div class="profile__head">
+								<div class="profile-slider" id="profile-slider">
+									<div class="profile-slider__wrap">
+										<img src="assets/images/noimage.jpg" alt="俺">
+										<img src="assets/images/noimage.jpg" alt="ラーメン">
+										<img src="assets/images/noimage.jpg" alt="囲碁">
+										<img src="assets/images/noimage.jpg" alt="読書">
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="profile__body">
-							<h3 class="profile__name">玉置 智士（Tamaki Satoshi）</h3>
-							<p class="profile__text"><span>生年月日：</span>1993.03.06</p>
-							<p class="profile__text"><span>出身：</span>奈良県</p>
-							<p class="profile__text"><span>経歴：</span>高卒認定試験 → 京都コンピュータ学院 → 放送大学教養学部（情報コース）</p>
-							<p class="profile__text"><span>趣味：</span>ドライブ、囲碁、読書</p>
-							<p class="profile__text">HTML／CSS／JavaScriptを使ったフロントエンド開発に興味があります。</p>
+							<div class="profile__body">
+								<h3 class="profile__name">玉置 智士（Tamaki Satoshi）</h3>
+								<div class="profile__sns">
+									<a href="https://www.facebook.com/profile.php?id=100051366033054" class="sns--facebook"><i class="fab fa-facebook-f fa-2x"></i></a>
+									<a href="#" class="sns--twitter"><i class="fab fa-twitter fa-2x"></i></a>
+								</div>
+								<p class="profile__text"><span>生年月日：</span>1993.03.06</p>
+								<p class="profile__text"><span>出身：</span>奈良県</p>
+								<p class="profile__text"><span>経歴：</span>高卒認定試験 → 京都コンピュータ学院 → 放送大学教養学部（情報コース）</p>
+								<p class="profile__text"><span>趣味：</span>ドライブ、囲碁、読書</p>
+								<p class="profile__text">HTML／CSS／JavaScriptを使ったフロントエンド開発に興味があります。</p>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -104,7 +112,7 @@
 								<div class="work__body">
 									<h3 class="work__title">合同会社クレエ</h3>
 									<p class="work__direction">
-										デザイナーさんの作ったデザインカンプを元に自分がHTML・CSSのコーディングとWordPressの「SnowMonkey」というテーマへの組み込みを担当しました。<br>コンタクトフォームは「Contact Form 7」というプラグインを使い実装しCSSをカスタマイズしました。<br>難しかった点はお客様の要望で全ページそれぞれにデザインを変え、なおかつレスポンシブにも対応させてたところです。
+										デザイナーさんの作ったデザインカンプを元に自分がHTML・CSSのコーディングとWordPressの「SnowMonkey」というテーマへの組み込みを担当しました。<br>コンタクトフォームは「Contact Form 7」というプラグインを使い実装しCSSをカスタマイズしました。<br>難しかった点はお客様の要望で全ページそれぞれにデザインを変え、なおかつレスポンシブにも対応させたところです。
 									</p>
 								</div>
 							</div>
@@ -112,7 +120,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="section">
+			<section class="section" id="contact">
 				<div class="section__head">
 					<h2 class="section__title">Contact</h2>
 				</div>
@@ -124,13 +132,13 @@
 					</div>
 				</div>
 			</section>
-			<footer class="footer">
-				<div class="footer__inner">
-					<p class="copyright"><small>&copy; satoshitamaki.github.io</small></p>
-				</div>
-			</footer>
 		</div>
 	</main>
+	<footer class="footer">
+		<div class="footer__inner">
+			<p class="copyright"><small>&copy; satoshitamaki.github.io</small></p>
+		</div>
+	</footer>
 </body>
 
 </html>

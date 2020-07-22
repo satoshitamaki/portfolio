@@ -14,6 +14,8 @@ $(function() {
     $(this).addClass("skill__item--current");
     $(".skill__text").eq(num).addClass("skill__text--current");
 
+    return false;
+
   });
 
 });
