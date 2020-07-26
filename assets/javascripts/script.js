@@ -1,39 +1,44 @@
 $(function() {
 
-  // skill
-  $('.skill__icon').on('mouseover', function(){
+  $(window).on('load resize', function(){
 
-    // 要素を取得
-    var num = $('.skill__icon').index(this);
-
-    // 文字数を取得
-    var moji = $('.skill__text').eq(num).text().length;
-
-    // フォントサイズ
-    var font_size = $('.skill__text').eq(num).css('font-size');
-
-    console.log(font_size);
-
-    // テキストを表示
-    $('.skill__text').eq(num).css({'width':moji * font_size}).show();
+    // 画面の横幅
+    var win_wid = $(window).width();
 
   });
-  // $(".skill__item").on("click", function(){
 
-  //   // clickされた要素の番号を取得
-  //   var num = $(".skill__item").index(this);
+  // skill
+  $('.skill').on('mouseover', function(){
+    
+    // 何番目の要素にマウスが乗っているか
+    var num = $('.skill').index(this);
 
-  //   // clickされる前のcurrentクラスを削除
-  //   $(".skill__item").removeClass("skill__item--current");
-  //   $(".skill__text").removeClass("skill__text--current");
+    // テキストの位置
+    var height_offset = $(this).find('.skill__text').height() + $(this).find('.skill__icon').height()/2 + 6;
 
-  //   // clickした要素にcurrentクラスを追加
-  //   $(this).addClass("skill__item--current");
-  //   $(".skill__text").eq(num).addClass("skill__text--current");
+    var width_offset = $(this).width()/2 - $(this).find('.skill__text').width()/2 - 12;
 
-  //   return false;
+    // // アイコンの高さの半分を取得
+    // var icon_height = $(this).height();
 
-  // });
+    // // アイコンの幅を取得
+    // var icon_width = $(this).find('.skill__text').width()/2 - $(this).width() / 2 + 12;
+
+    // // tipを表示する位置
+    // var tip_offset = text_height + (icon_height/2) + 6;
+
+    // マウスが乗ってる要素にクラスを追加
+
+    $(this).addClass('skill--active').find('.skill__text').css({'top':'-'+height_offset+'px', 'left':width_offset+'px'});
+    // $('.skill').eq(num).addClass('skill--active').find('.skill__text').css({'top':'-'+tip_offset+'px', 'left':'-'+icon_width+'px'});
+
+    console.log(text_height);
+
+  }).on('mouseout', function(){
+
+    $('.skill').removeClass('skill--active');
+
+  });
 
   // scroll
   $('a[href^="#"]').on("click", function(){
